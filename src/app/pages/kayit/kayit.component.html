@@ -1,0 +1,41 @@
+<div class="text-white" style="margin: auto; padding: 20px; width:500px">
+  <form>
+    <h2>Arıza Kayıt</h2>
+    <div class="form-group" style="margin-top: 1rem">
+      <label>Marka</label>
+      <input [(ngModel)]="_Giris.marka" type="text" class="form-control" placeholder="Marka Giriniz">
+    </div>
+    <div class="form-group" style="margin-top: 1rem">
+      <label>Model</label>
+      <input [(ngModel)]="_Giris.model" type="text" class="form-control"  placeholder="Model Giriniz">
+    </div>
+    <div class="form-group" style="margin-top: 1rem">
+      <label>Arıza</label>
+      <input [(ngModel)]="_Giris.ariza" type="text" class="form-control" placeholder="Arıza Giriniz">
+    </div>
+    <div class="form-group" style="margin-top: 1rem">
+      <label>Email Adresi</label>
+      <input [(ngModel)]="_Giris.email" type="text" class="form-control"  placeholder="Email Giriniz">
+    </div>
+    <div class="form-group" style="margin-top: 1rem">
+      <label>Adres</label>
+      <input [(ngModel)]="_Giris.adres" type="text" class="form-control" placeholder="Adres Giriniz">
+    </div>
+    <div class="form-group" style="margin-top: 1rem">
+      <label>Telefon Numarası</label>
+      <input [(ngModel)]="_Giris.telefon" type="text" class="form-control" placeholder="Telefon Giriniz">
+    </div>
+    <div class="form-group" style="margin-top: 1rem">
+      <label>Tarih</label>
+      <div class="input-group">
+        <input [(ngModel)]="_Giris.tarih" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker">
+        <button class="btn btn-outline-secondary calendar text-white" (click)="d.toggle()" type="button">Takvim</button>
+      </div>
+    </div>
+    <div class="form-group" style="margin-top: 1rem">
+      <label for="exampleFormControlTextarea1">Açıklama</label>
+      <textarea [(ngModel)]="_Giris.aciklama" class="form-control" placeholder="Açıklama alanı" rows="5"></textarea>
+    </div>
+    <button type="submit" (click)="gonder()" class="btn btn-dark" style="margin-top: 1rem">Kaydet</button>
+  </form>
+</div>
