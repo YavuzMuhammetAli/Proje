@@ -2,20 +2,40 @@
   <form>
     <h2>Arıza Kayıt</h2>
     <div class="form-group" style="margin-top: 1rem">
+      <label>SLA Tipi</label>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Seçiniz...</option>
+        <option value="1">Bakım</option>
+        <option value="2">Onarım</option>
+      </select>
+    </div>
+    <div class="form-group" style="margin-top: 1rem">
       <label>Marka</label>
       <input [(ngModel)]="_Giris.marka" type="text" class="form-control" placeholder="Marka Giriniz">
     </div>
     <div class="form-group" style="margin-top: 1rem">
       <label>Model</label>
-      <input [(ngModel)]="_Giris.model" type="text" class="form-control"  placeholder="Model Giriniz">
+      <input [(ngModel)]="_Giris.model" type="text" class="form-control" placeholder="Model Giriniz">
+    </div>
+    <div class="form-group" style="margin-top: 1rem">
+      <label>Seri No</label>
+      <input type="text" class="form-control" placeholder="Seri Numarası Giriniz">
     </div>
     <div class="form-group" style="margin-top: 1rem">
       <label>Arıza</label>
       <input [(ngModel)]="_Giris.ariza" type="text" class="form-control" placeholder="Arıza Giriniz">
     </div>
     <div class="form-group" style="margin-top: 1rem">
+      <label>SLA Türü</label>
+      <select class="form-select" aria-label="Default select example">
+        <option selected value="1">Normal</option>
+        <option value="2">Öncelikli</option>
+        <option value="3">Kritik</option>
+      </select>
+    </div>
+    <div class="form-group" style="margin-top: 1rem">
       <label>Email Adresi</label>
-      <input [(ngModel)]="_Giris.email" type="text" class="form-control"  placeholder="Email Giriniz">
+      <input [(ngModel)]="_Giris.email" type="text" class="form-control" placeholder="Email Giriniz">
     </div>
     <div class="form-group" style="margin-top: 1rem">
       <label>Adres</label>
@@ -28,7 +48,8 @@
     <div class="form-group" style="margin-top: 1rem">
       <label>Tarih</label>
       <div class="input-group">
-        <input [(ngModel)]="_Giris.tarih" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker">
+        <input [(ngModel)]="_Giris.tarih" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker
+          #d="ngbDatepicker">
         <button class="btn btn-outline-secondary calendar text-white" (click)="d.toggle()" type="button">Takvim</button>
       </div>
     </div>
